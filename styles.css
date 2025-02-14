@@ -1,0 +1,11 @@
+/* Specific styles for different file types (file header) */
+.file-highlighter-type-test {
+    background-color: #66a368 !important;
+}
+
+/* Dark mode compatibility */
+@media (prefers-color-scheme: dark) {
+    .file-highlighter-type-test {
+        background-color: #003a04 !important;
+    }
+}

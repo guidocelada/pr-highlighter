@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "GitHub File Type Identifier",
+  "version": "1.0",
+  "description": "Visually identifies test, config, and regular files in GitHub PRs",
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*"],
+      "css": ["styles.css"],
+      "js": ["content.js"]
+    }
+  ]
+}
