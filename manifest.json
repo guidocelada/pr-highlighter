@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "GitHub File Type Identifier",
+  "name": "PR Test File Identifier",
   "version": "1.0",
-  "description": "Visually identifies test, config, and regular files in GitHub PRs",
+  "description": "Visually identifies test files in GitHub PRs",
   "permissions": ["activeTab"],
   "content_scripts": [
     {
