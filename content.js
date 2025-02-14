@@ -7,13 +7,11 @@ const TEST_PATTERNS = [
 function getFileType(filepath) {
     const normalizedPath = filepath.replace(/\\/g, '/');
 
-    let fileType = 'regular';
-
     if (TEST_PATTERNS.some(pattern => pattern.test(normalizedPath))) {
-        fileType = 'test';
+        return 'test';
     }
 
-    return fileType;
+    return 'regular';
 }
 
 function processSingleFileView() {
