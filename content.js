@@ -1,13 +1,8 @@
 const TEST_PATTERNS = [
-    /[-_.]test\./i,
-    /[-_.]spec\./i,
-    /[\\/]tests?[\\/]/i,  // Matches /test/ or /tests/ directories
-    /[\\/]__tests__[\\/]/,
-    /[\\/]__test__[\\/]/,
-    /[\\/]spec[\\/]/i,
-    /[\\/]specs[\\/]/i
+    /[-_.](test|spec)\./i,  // Matches .test. or .spec. in filenames
+    /[\\/](tests?|__tests__|__test__|spec|specs|intTest)[\\/]/i,  // Matches directories like /test/, /tests/, /__tests__/, /spec/, etc.
+    /.*(Test|IT)\..*/i       // Matches any file named *Test.* or *IT.*
 ];
-
 
 function getFileType(filepath) {
     const normalizedPath = filepath.replace(/\\/g, '/');
